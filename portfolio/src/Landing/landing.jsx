@@ -1,7 +1,7 @@
 import React from 'react';
 import './landing.css';
-import { Container, Row, Col } from 'reactstrap';
-const screenW = window.screen.width;
+import { Container, Row } from 'reactstrap';
+const svgselfie = require('../assets/images/selfietestimg4.svg');
 
 class Welcome extends React.Component {
   constructor(props) {
@@ -32,34 +32,51 @@ class Welcome extends React.Component {
       <div>
         {isDesktop ? (
           <Container fluid='xl' id='landing'>
+            <div className='imgHolder'>
+              <img src={svgselfie} alt='selfie'></img>
+            </div>
             <div className='overlay'>
-              <p id='welcome'>Welcome</p>
               <Row id='navRow'>
                 <Container fluid='xl navLink' id='navP'>
-                  <a href='#'>Portfolio</a>
+                  <Container className='navCInner'>
+                    <a href='#'>Portfolio</a>
+                  </Container>
                 </Container>
                 <Container fluid='xl navLink' id='navR'>
-                  <a href='#'>Resume</a>
+                  <Container className='navCInner'>
+                    <a href='#'>Resume</a>
+                  </Container>
                 </Container>
                 <Container fluid='xl navLink' id='navA'>
-                  <a href='#'>About</a>
+                  <Container className='navCInner'>
+                    <a href='#'>About</a>
+                  </Container>
                 </Container>
                 <Container fluid='xl navLink' id='navC'>
-                  <a href='#'>Contact</a>
+                  <Container className='navCInner'>
+                    <a href='#'>Contact</a>
+                  </Container>
                 </Container>
                 <Container fluid='xl navLink' id='navF'>
-                  <a href='#'>FAQ</a>
+                  <Container className='navCInner'>
+                    <a href='#'>FAQ</a>
+                  </Container>
                 </Container>
               </Row>
             </div>
           </Container>
         ) : (
           <Container fluid='xl smallView'>
-            <div class='smallVR'>Portfolio</div>
-            <div class='smallVR'>Resume</div>
-            <div class='smallVR'>About</div>
-            <div class='smallVR'>Contact</div>
-            <div class='smallVR'>FAQ</div>
+            <div className='imgHolderSm'>
+              <img src={svgselfie} alt='selfie'></img>
+            </div>
+            <Container className='navLinkSm'>
+              <div className='smallVR'>Portfolio</div>
+              <div className='smallVR'>Resume</div>
+              <div className='smallVR'>About</div>
+              <div className='smallVR'>Contact</div>
+              <div className='smallVR'>FAQ</div>
+            </Container>
           </Container>
         )}
       </div>

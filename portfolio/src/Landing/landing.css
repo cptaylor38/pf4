@@ -3,6 +3,9 @@
   justify-content: center;
   background: white;
   flex-flow: column wrap;
+  max-height: 100vw;
+  max-width: 100vw;
+  position: relative;
 }
 
 .overlay {
@@ -12,38 +15,53 @@
   flex-flow: column wrap;
 }
 
-#welcome {
-  justify-self: center;
-  align-self: center;
-  font-size: 200px;
-  font-weight: bolder;
-  color: rgb(45, 45, 146);
+.imgHolder {
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+.imgHolder img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  background: darkgrey;
   opacity: 0.8;
-  margin-top: 20vh;
-  font-family: 'Nixie One', cursive;
 }
 
 #navRow {
   margin: 20vh auto auto auto;
   justify-content: space-evenly;
   display: flex;
-  flex-flow: row wrap;
-  width: 100%;
+  flex-flow: column;
+  position: absolute;
+  right: 20%;
+  top: 0;
+}
+
+.navCInner {
+  padding: 10px;
+  justify-self: center;
+  align-self: center;
 }
 
 .navLink {
-  font-size: 32px;
+  font-size: 25px;
   text-align: center;
-  background: white;
-  border: 2px outset blue;
-  padding: 30px;
+  border: 2px outset rgb(60, 60, 255);
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .navLink a {
   margin: auto;
-  color: rgb(75, 73, 73);
+  color: white;
+  font-weight: bolder;
   text-decoration: none;
   font-family: 'Nixie One', cursive;
+}
+
+.navLink a:hover {
+  color: blue;
 }
 
 #navP {
@@ -71,11 +89,62 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 15vh;
+  position: relative;
 }
 
 .smallVR {
-  font-size: 32px;
-  padding: 30px;
+  font-size: 18px;
   font-family: 'Nixie One', cursive;
+  z-index: 3;
+}
+
+.imgHolderSm {
+  max-height: 100vh;
+  max-width: 100vw;
+  z-index: -1;
+  position: relative;
+}
+
+.imgHolderSm img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  background: darkgrey;
+  opacity: 0.8;
+}
+
+.navLinkSm {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin-top: 10;
+}
+
+@media (max-width: 1024px) {
+  .navLinkSm {
+    top: unset;
+    color: white;
+    font-weight: bolder;
+    flex-direction: row;
+  }
+  .smallVR {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 510px) {
+  .navLinkSm {
+    top: 0;
+    flex-direction: column;
+    height: 100vh;
+    align-items: flex-end;
+  }
+  .smallVR {
+    margin-top: 5px;
+  }
 }
