@@ -1,6 +1,7 @@
 import React from 'react';
 import './landing.css';
 import { Container, Row } from 'reactstrap';
+import { Link } from 'react-router-dom';
 const svgselfie = require('../assets/images/selfietestimg4.svg');
 
 class Welcome extends React.Component {
@@ -39,27 +40,27 @@ class Welcome extends React.Component {
               <Row id='navRow'>
                 <Container fluid='xl navLink' id='navP'>
                   <Container className='navCInner'>
-                    <a href='#'>Portfolio</a>
+                    <Link to='/portfolio'>Portfolio</Link>
                   </Container>
                 </Container>
                 <Container fluid='xl navLink' id='navR'>
                   <Container className='navCInner'>
-                    <a href='#'>Resume</a>
+                    <Link to='/resume'>Resume</Link>
                   </Container>
                 </Container>
                 <Container fluid='xl navLink' id='navA'>
                   <Container className='navCInner'>
-                    <a href='#'>About</a>
+                    <Link to='/about'>About</Link>
                   </Container>
                 </Container>
                 <Container fluid='xl navLink' id='navC'>
                   <Container className='navCInner'>
-                    <a href='#'>Contact</a>
+                    <Link to='/contact'>Contact</Link>
                   </Container>
                 </Container>
                 <Container fluid='xl navLink' id='navF'>
                   <Container className='navCInner'>
-                    <a href='#'>FAQ</a>
+                    <Link to='/faq'>FAQ</Link>
                   </Container>
                 </Container>
               </Row>
@@ -71,11 +72,21 @@ class Welcome extends React.Component {
               <img src={svgselfie} alt='selfie'></img>
             </div>
             <Container className='navLinkSm'>
-              <div className='smallVR'>Portfolio</div>
-              <div className='smallVR'>Resume</div>
-              <div className='smallVR'>About</div>
-              <div className='smallVR'>Contact</div>
-              <div className='smallVR'>FAQ</div>
+              <div className='smallVR'>
+                <Link to='/portfolio'>Portfolio</Link>
+              </div>
+              <div className='smallVR'>
+                <Link to='/resume'>Resume</Link>
+              </div>
+              <div className='smallVR'>
+                <Link to='/about'>About</Link>
+              </div>
+              <div className='smallVR'>
+                <Link to='/contact'>Contact</Link>
+              </div>
+              <div className='smallVR'>
+                <Link to='/faq'>FAQ</Link>
+              </div>
             </Container>
           </Container>
         )}

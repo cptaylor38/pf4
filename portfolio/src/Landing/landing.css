@@ -125,6 +125,15 @@
   margin-top: 10;
 }
 
+.navLinkSm a {
+  text-decoration: none;
+  color: white;
+}
+
+.navLinkSm a:hover {
+  color: blue;
+}
+
 @media (max-width: 1024px) {
   .navLinkSm {
     top: unset;
