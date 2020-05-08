@@ -1,15 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Contact.css';
-import {
-  FormGroup,
-  Label,
-  Input,
-  Button,
-  Container,
-  Row,
-  Col,
-} from 'reactstrap';
+import { FormGroup, Label, Input, Button } from 'reactstrap';
 const axios = require('axios');
 
 const Contact = () => {
@@ -18,6 +9,8 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+
+  const [formState, setFormState] = useState(true);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,13 +25,17 @@ const Contact = () => {
       formData.message !== ''
     ) {
       try {
+        setFormState(false);
         await axios
           .post('/contact/email', {
             email: formData.email,
             subject: formData.subject,
             message: formData.message,
           })
-          .then((response) => window.location.reload());
+          .then((response) => {
+            setFormData({ email: '', subject: '', message: '' });
+            setFormState(true);
+          });
       } catch (error) {
         console.log('client request', error);
       }
@@ -46,67 +43,44 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <Container fluid='xl contactFull'>
-        <Row xs='12' id='contactTopR'>
-          <Col xs='6' className='conCol' id='colForm'>
-            <Container className='contactFormC'>
-              <form onSubmit={sendEmail}>
-                <FormGroup>
-                  <Label for='exampleEmail'>Email</Label>
-                  <Input
-                    type='email'
-                    name='email'
-                    id='exampleEmail'
-                    placeholder='jSmith@email.com'
-                    onChange={handleChange}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for='subjectText'>Subject</Label>
-                  <Input
-                    type='text'
-                    name='subject'
-                    id='subjectText'
-                    onChange={handleChange}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for='messageText'>Message</Label>
-                  <Input
-                    type='textarea'
-                    name='message'
-                    rows='10'
-                    id='messageText'
-                    onChange={handleChange}
-                  />
-                </FormGroup>
-                <Button>Submit</Button>
-              </form>
-            </Container>
-          </Col>
-          <Col xs='6' className='conCol' id='colLinks'>
-            <Container className='contactLinksC'>
-              <Link to='/landing'>Home</Link>
-              <Link to='/portfolio'>Portfolio</Link>
-              <Link to='/resume'>Resume</Link>
-              <Link to='/about'>About</Link>
-              <Link to='/faq'>FAQ</Link>
-            </Container>
-          </Col>
-        </Row>
-        <Row xs='12' id='conBottomR'>
-          <Container fluid='xl socialLinks'>
-            <Link to='https://www.facebook.com/cptaylor38/'>Facebook</Link>
-            <Link to='https://github.com/cptaylor38'>Github</Link>
-            <Link to='https://www.linkedin.com/in/corbin-taylor-419a8a188/'>
-              LinkedIn
-            </Link>
-            <Link to='https://www.instagram.com/cptaylo2/'>Instagram</Link>
-          </Container>
-        </Row>
-      </Container>
-    </>
+    <div>
+      {formState ? (
+        <form onSubmit={sendEmail}>
+          <FormGroup>
+            <Label for='exampleEmail'>Email</Label>
+            <Input
+              type='email'
+              name='email'
+              id='exampleEmail'
+              placeholder='jSmith@email.com'
+              onChange={handleChange}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for='subjectText'>Subject</Label>
+            <Input
+              type='text'
+              name='subject'
+              id='subjectText'
+              onChange={handleChange}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for='messageText'>Message</Label>
+            <Input
+              type='textarea'
+              name='message'
+              rows='5'
+              id='messageText'
+              onChange={handleChange}
+            />
+          </FormGroup>
+          <Button>Submit</Button>
+        </form>
+      ) : (
+        <p id='emailLoadIndicator'>Sending...</p>
+      )}
+    </div>
   );
 };
 

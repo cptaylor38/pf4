@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/contact/email', async (req, res) => {
   try {
-    console.log('request attempted', req.body);
     const msg = {
       to: 'cylor.dev@gmail.com',
       from: 'cylor.dev@gmail.com',
