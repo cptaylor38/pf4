@@ -43,6 +43,46 @@ class Welcome extends React.Component {
           <Row xl='12' id='fullPageDt'>
             <Col xl='4' lg='4' id='bcSection'>
               <Container id='bcContent'>
+                <Row className='bioR'>
+                  <Container className='socialLinksCont'>
+                    <a
+                      href='https://www.facebook.com/cptaylor38/'
+                      className='tip'
+                    >
+                      <FontAwesomeIcon icon={faFacebook} />
+                      <span>Facebook</span>
+                    </a>
+                    <a href='https://github.com/cptaylor38' className='tip'>
+                      <FontAwesomeIcon icon={faGithub} />
+                      <span>Github</span>
+                    </a>
+                    <a
+                      href='https://www.linkedin.com/in/corbin-taylor-419a8a188/'
+                      className='tip'
+                    >
+                      <FontAwesomeIcon icon={faLinkedin} />
+                      <span>LinkedIn</span>
+                    </a>
+                    <a
+                      href='https://www.instagram.com/cptaylo2/'
+                      className='tip'
+                    >
+                      <FontAwesomeIcon icon={faInstagram} />
+                      <span>Instagram</span>
+                    </a>
+                    <a href='mailto: cylor.dev@gmail.com' className='tip'>
+                      <FontAwesomeIcon icon={faEnvelope} />
+                      <span>Email Me</span>
+                    </a>
+                    <a
+                      href='https://docs.google.com/document/d/1oPcbN59DI1ZDNFx9t0PCiJnB9MI_5TlFAu0ekCZANuc/export?format=pdf'
+                      className='tip'
+                    >
+                      <FontAwesomeIcon icon={faFileAlt} />
+                      <span>My Resume</span>
+                    </a>
+                  </Container>
+                </Row>
                 <Row className='bioR' id='picRow'>
                   <Container id='picCont'>
                     <img src={svgselfie} alt='selfie' id='selfie'></img>
@@ -69,41 +109,7 @@ class Welcome extends React.Component {
                   </Container>
                 </Row>
                 <Row className='bioR'>
-                  <Container id='socialLinksCont'>
-                    <a
-                      href='https://www.facebook.com/cptaylor38/'
-                      title='Facebook'
-                    >
-                      <FontAwesomeIcon icon={faFacebook} />
-                    </a>
-                    <a href='https://github.com/cptaylor38' title='Github'>
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                    <a
-                      href='https://www.linkedin.com/in/corbin-taylor-419a8a188/'
-                      title='LinkedIn'
-                    >
-                      <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                    <a
-                      href='https://www.instagram.com/cptaylo2/'
-                      title='Instagram'
-                    >
-                      <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                    <a href='mailto: cylor.dev@gmail.com' title='Email Me'>
-                      <FontAwesomeIcon icon={faEnvelope} />
-                    </a>
-                    <a
-                      href='https://docs.google.com/document/d/1oPcbN59DI1ZDNFx9t0PCiJnB9MI_5TlFAu0ekCZANuc/export?format=pdf'
-                      title='My Resume'
-                    >
-                      <FontAwesomeIcon icon={faFileAlt} />
-                    </a>
-                  </Container>
-                </Row>
-                <Row className='bioR'>
-                  <Container id='contactCont'>
+                  <Container className='contactCont'>
                     <Contact />
                   </Container>
                 </Row>
@@ -116,7 +122,67 @@ class Welcome extends React.Component {
           </Row>
         ) : (
           <Container fluid='xl smallView'>
-            <div>Mobile</div>
+            <div className='mobileBground'>
+              <img src={svgselfie} alt='selfie' id='mobilePic' />
+            </div>
+            <Row>
+              <Container className='socialLinksCont' id='socLinkMob'>
+                <a href='https://www.facebook.com/cptaylor38/' className='tip'>
+                  <FontAwesomeIcon icon={faFacebook} />
+                  <span>Facebook</span>
+                </a>
+                <a href='https://github.com/cptaylor38' className='tip'>
+                  <FontAwesomeIcon icon={faGithub} />
+                  <span>Github</span>
+                </a>
+                <a
+                  href='https://www.linkedin.com/in/corbin-taylor-419a8a188/'
+                  className='tip'
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                  <span>LinkedIn</span>
+                </a>
+                <a href='https://www.instagram.com/cptaylo2/' className='tip'>
+                  <FontAwesomeIcon icon={faInstagram} />
+                  <span>Instagram</span>
+                </a>
+                <a href='mailto: cylor.dev@gmail.com' className='tip'>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <span>Email Me</span>
+                </a>
+                <a
+                  href='https://docs.google.com/document/d/1oPcbN59DI1ZDNFx9t0PCiJnB9MI_5TlFAu0ekCZANuc/export?format=pdf'
+                  className='tip'
+                >
+                  <FontAwesomeIcon icon={faFileAlt} />
+                  <span>My Resume</span>
+                </a>
+              </Container>
+            </Row>
+            <Row>
+              <Container id='mobileBioCont'>
+                <p id='mobileBio'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat velit explicabo ea totam quos aliquam molestiae.
+                  Praesentium libero sit, eos ipsam modi excepturi dolores saepe
+                  minima eum earum perspiciatis! Deleniti dolor aperiam tenetur
+                  rem ducimus exercitationem porro aspernatur at, cumque ex
+                  accusamus similique ipsam, illo quia repellendus iusto odit
+                  obcaecati reiciendis officiis eligendi, natus aliquam placeat
+                  eos neque. Sequi fugit repudiandae voluptates rerum dolorem id
+                  dicta, repellendus quasi? Alias ipsam voluptatum, voluptatem
+                  sint modi dicta porro et saepe exercitationem expedita esse
+                  minima illum tempora ratione, recusandae at eos aliquid
+                  repellendus architecto. Tenetur, iste mollitia! Maiores soluta
+                  tenetur ab autem velit!
+                </p>
+              </Container>
+            </Row>
+            <Row className='bioR'>
+              <Container className='contactCont' id='mobileContactArea'>
+                <Contact />
+              </Container>
+            </Row>
           </Container>
         )}
       </div>

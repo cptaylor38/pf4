@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import { FormGroup, Label, Input, Button } from 'reactstrap';
+import { FormGroup, Input, Button } from 'reactstrap';
 const axios = require('axios');
 
 const Contact = () => {
@@ -47,7 +47,6 @@ const Contact = () => {
       {formState ? (
         <form onSubmit={sendEmail}>
           <FormGroup>
-            <Label for='exampleEmail'>Email</Label>
             <Input
               type='email'
               name='email'
@@ -57,25 +56,25 @@ const Contact = () => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for='subjectText'>Subject</Label>
             <Input
               type='text'
               name='subject'
+              placeholder='Subject..'
               id='subjectText'
               onChange={handleChange}
             />
           </FormGroup>
           <FormGroup>
-            <Label for='messageText'>Message</Label>
             <Input
               type='textarea'
               name='message'
+              placeholder='Message...'
               rows='5'
               id='messageText'
               onChange={handleChange}
             />
           </FormGroup>
-          <Button>Submit</Button>
+          <Button>Send</Button>
         </form>
       ) : (
         <p id='emailLoadIndicator'>Sending...</p>
