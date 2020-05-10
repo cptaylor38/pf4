@@ -45,6 +45,10 @@
   padding: 10px;
 }
 
+.bioSummary {
+  text-align: center;
+}
+
 .socialLinksCont {
   display: flex;
   justify-content: space-evenly;
@@ -134,18 +138,17 @@
 }
 
 #mobileBioCont {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
+  margin-top: 10px;
   font-size: 16px;
   min-width: 100vw;
 }
 
-#mobileBio {
+.mobileBio {
   background: rgba(255, 251, 251, 0.932);
   padding: 20px;
   color: rgb(88, 86, 86);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-bottom: 0;
 }
 

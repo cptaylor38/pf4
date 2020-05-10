@@ -41,7 +41,7 @@ class Welcome extends React.Component {
       <div>
         {isDesktop ? (
           <Row xl='12' id='fullPageDt'>
-            <Col xl='4' lg='4' id='bcSection'>
+            <Col xl='3' lg='4' id='bcSection'>
               <Container id='bcContent'>
                 <Row className='bioR'>
                   <Container className='socialLinksCont'>
@@ -90,21 +90,22 @@ class Welcome extends React.Component {
                 </Row>
                 <Row className='bioR'>
                   <Container id='bioCont'>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quaerat velit explicabo ea totam quos aliquam molestiae.
-                      Praesentium libero sit, eos ipsam modi excepturi dolores
-                      saepe minima eum earum perspiciatis! Deleniti dolor
-                      aperiam tenetur rem ducimus exercitationem porro
-                      aspernatur at, cumque ex accusamus similique ipsam, illo
-                      quia repellendus iusto odit obcaecati reiciendis officiis
-                      eligendi, natus aliquam placeat eos neque. Sequi fugit
-                      repudiandae voluptates rerum dolorem id dicta, repellendus
-                      quasi? Alias ipsam voluptatum, voluptatem sint modi dicta
-                      porro et saepe exercitationem expedita esse minima illum
-                      tempora ratione, recusandae at eos aliquid repellendus
-                      architecto. Tenetur, iste mollitia! Maiores soluta tenetur
-                      ab autem velit!
+                    <p className='bioSummary'>
+                      Hello, my name is Corbin. From an early age, creating has
+                      always been a passion and outlet. Whether it was creating
+                      clay replicas of video game characters, painting and
+                      building props as promotional material at my local movie
+                      theater, or sketching a passing thought, creativity has
+                      always helped bring out the best in me.
+                    </p>
+                    <p className='bioSummary'>
+                      I obtained an Associates in Simulation and Game Design
+                      that inspired interest in a new kind of medium,
+                      programming and software development. I decied to pursue
+                      my curiousity further and found a program at a local
+                      university focusing on full stack development that showed
+                      me a new way to be creative. A creative outlet that can be
+                      practical and impactful.
                     </p>
                   </Container>
                 </Row>
@@ -115,7 +116,7 @@ class Welcome extends React.Component {
                 </Row>
               </Container>
             </Col>
-            <Col xl='8' lg='8' id='pSection'>
+            <Col xl='9' lg='8' id='pSection'>
               <Row>project summary</Row>
               <Row>project list</Row>
             </Col>
@@ -161,20 +162,21 @@ class Welcome extends React.Component {
             </Row>
             <Row>
               <Container id='mobileBioCont'>
-                <p id='mobileBio'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quaerat velit explicabo ea totam quos aliquam molestiae.
-                  Praesentium libero sit, eos ipsam modi excepturi dolores saepe
-                  minima eum earum perspiciatis! Deleniti dolor aperiam tenetur
-                  rem ducimus exercitationem porro aspernatur at, cumque ex
-                  accusamus similique ipsam, illo quia repellendus iusto odit
-                  obcaecati reiciendis officiis eligendi, natus aliquam placeat
-                  eos neque. Sequi fugit repudiandae voluptates rerum dolorem id
-                  dicta, repellendus quasi? Alias ipsam voluptatum, voluptatem
-                  sint modi dicta porro et saepe exercitationem expedita esse
-                  minima illum tempora ratione, recusandae at eos aliquid
-                  repellendus architecto. Tenetur, iste mollitia! Maiores soluta
-                  tenetur ab autem velit!
+                <p className='mobileBio bioSummary'>
+                  Hello, my name is Corbin. From an early age, creating has
+                  always been a passion and outlet. Whether it was creating clay
+                  replicas of video game characters, painting and building props
+                  as promotional material at my local movie theater, or
+                  sketching a passing thought, creativity has always helped
+                  bring out the best in me.
+                </p>
+                <p className='mobileBio bioSummary'>
+                  I obtained an Associates in Simulation and Game Design that
+                  inspired interest in a new kind of medium, programming and
+                  software development. I decied to pursue my curiousity further
+                  and found a program at a local university focusing on full
+                  stack development that showed me a new way to be creative. A
+                  creative outlet that can be practical and impactful.
                 </p>
               </Container>
             </Row>
