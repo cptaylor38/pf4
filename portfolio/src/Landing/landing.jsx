@@ -2,6 +2,7 @@ import React from 'react';
 import './landing.css';
 import { Container, Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Portfolio from '../Portfolio/Portfolio';
 import { faEnvelope, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
@@ -117,8 +118,7 @@ class Welcome extends React.Component {
               </Container>
             </Col>
             <Col xl='9' lg='8' id='pSection'>
-              <Row>project summary</Row>
-              <Row>project list</Row>
+              <Portfolio isMobile={false} />
             </Col>
           </Row>
         ) : (
