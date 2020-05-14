@@ -10,7 +10,7 @@
     "client": "cd portfolio && npm run start",
     "install": "cd portfolio && npm install",
     "build": "cd portfolio && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd portfolio && npm install && npm run build"
   },
   "repository": {
     "type": "git",
