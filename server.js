@@ -28,12 +28,12 @@ app.post('/contact/email', async (req, res) => {
   }
 });
 
-// if (process.env.NODE_ENV === 'development') {
-//   app.use(express.static('portfolio/build'));
-//   app.get('*', (request, response) => {
-//     response.sendFile(path.join(__dirname, 'portfolio/build', 'index.html'));
-//   });
-// }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('portfolio/build'));
+  app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'portfolio/build', 'index.html'));
+  });
+}
 
 app.use(express.static(path.join(__dirname, 'portfolio/build')));
 app.get('*', (request, response) => {
