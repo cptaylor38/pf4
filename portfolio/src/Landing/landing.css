@@ -93,6 +93,8 @@
 #pSection {
   padding: 30px;
   background: rgba(21, 105, 189, 0.925);
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -101,63 +103,4 @@
 
 ::-webkit-scrollbar-button {
   display: none;
-}
-
-.smallView {
-  position: relative;
-  display: flex;
-  width: 100vw;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.mobileBground {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  z-index: -3;
-}
-
-#mobilePic {
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  width: 100vw;
-  z-index: -3;
-  background: darkgrey;
-}
-
-#socLinkMob {
-  background: rgb(65, 63, 63);
-  min-width: 100vw;
-}
-
-#mobileBioCont {
-  margin-top: 10px;
-  font-size: 16px;
-  min-width: 100vw;
-}
-
-.mobileBio {
-  background: rgba(255, 251, 251, 0.932);
-  padding: 20px;
-  color: rgb(88, 86, 86);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  margin-bottom: 0;
-}
-
-#mobileContactArea {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
-  color: white;
-  min-width: 100vw;
-}
-
-#mobileContactArea form {
-  padding: 10px;
 }

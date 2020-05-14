@@ -1,10 +1,8 @@
 .portfolioFullCont {
-  height: 100vh;
-  overflow-y: scroll;
+  margin: 20px 0;
 }
 
 #portfolioTopR {
-  min-height: 40%;
   display: flex;
   flex-flow: row wrap;
   background: rgba(255, 253, 253, 0.904);
@@ -12,6 +10,8 @@
   padding: 30px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  justify-content: center;
+  align-items: center;
 }
 
 .pTopLImgs {
@@ -57,58 +57,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-#portBottomRow {
-  padding: 30px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  overflow-y: scroll;
-  height: 40vh;
-  margin-top: 20px !important;
-  width: 100%;
-  background: rgba(255, 253, 253, 0.904);
-}
-
-#portBottomCon {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  overflow-y: scroll;
-}
-
-.portImgOverview {
-  max-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.projectCard {
-  width: 400px;
-  height: 200px;
-  position: relative;
-  padding: 0;
-  margin: 20px;
-  background: grey;
-  position: relative;
-}
-
-#overviewCardHeader {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.418);
-  color: white;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 @media (max-width: 1435px) {

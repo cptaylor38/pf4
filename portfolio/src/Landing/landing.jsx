@@ -11,6 +11,7 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import Contact from '../Contact/Contact';
+import MobileController from '../MobileDisplay/MobileController/MobileController';
 const svgselfie = require('../assets/images/selfietestimg4.svg');
 
 class Welcome extends React.Component {
@@ -48,17 +49,26 @@ class Welcome extends React.Component {
                   <Container className='socialLinksCont'>
                     <a
                       href='https://www.facebook.com/cptaylor38/'
+                      target='_blank'
+                      rel='noopener noreferrer'
                       className='tip'
                     >
                       <FontAwesomeIcon icon={faFacebook} />
                       <span>Facebook</span>
                     </a>
-                    <a href='https://github.com/cptaylor38' className='tip'>
+                    <a
+                      href='https://github.com/cptaylor38'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='tip'
+                    >
                       <FontAwesomeIcon icon={faGithub} />
                       <span>Github</span>
                     </a>
                     <a
                       href='https://www.linkedin.com/in/corbin-taylor-419a8a188/'
+                      target='_blank'
+                      rel='noopener noreferrer'
                       className='tip'
                     >
                       <FontAwesomeIcon icon={faLinkedin} />
@@ -66,6 +76,8 @@ class Welcome extends React.Component {
                     </a>
                     <a
                       href='https://www.instagram.com/cptaylo2/'
+                      target='_blank'
+                      rel='noopener noreferrer'
                       className='tip'
                     >
                       <FontAwesomeIcon icon={faInstagram} />
@@ -77,6 +89,8 @@ class Welcome extends React.Component {
                     </a>
                     <a
                       href='https://docs.google.com/document/d/1oPcbN59DI1ZDNFx9t0PCiJnB9MI_5TlFAu0ekCZANuc/export?format=pdf'
+                      target='_blank'
+                      rel='noopener noreferrer'
                       className='tip'
                     >
                       <FontAwesomeIcon icon={faFileAlt} />
@@ -122,70 +136,7 @@ class Welcome extends React.Component {
             </Col>
           </Row>
         ) : (
-          <Container fluid='xl smallView'>
-            <div className='mobileBground'>
-              <img src={svgselfie} alt='selfie' id='mobilePic' />
-            </div>
-            <Row>
-              <Container className='socialLinksCont' id='socLinkMob'>
-                <a href='https://www.facebook.com/cptaylor38/' className='tip'>
-                  <FontAwesomeIcon icon={faFacebook} />
-                  <span>Facebook</span>
-                </a>
-                <a href='https://github.com/cptaylor38' className='tip'>
-                  <FontAwesomeIcon icon={faGithub} />
-                  <span>Github</span>
-                </a>
-                <a
-                  href='https://www.linkedin.com/in/corbin-taylor-419a8a188/'
-                  className='tip'
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />
-                  <span>LinkedIn</span>
-                </a>
-                <a href='https://www.instagram.com/cptaylo2/' className='tip'>
-                  <FontAwesomeIcon icon={faInstagram} />
-                  <span>Instagram</span>
-                </a>
-                <a href='mailto: cylor.dev@gmail.com' className='tip'>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <span>Email Me</span>
-                </a>
-                <a
-                  href='https://docs.google.com/document/d/1oPcbN59DI1ZDNFx9t0PCiJnB9MI_5TlFAu0ekCZANuc/export?format=pdf'
-                  className='tip'
-                >
-                  <FontAwesomeIcon icon={faFileAlt} />
-                  <span>My Resume</span>
-                </a>
-              </Container>
-            </Row>
-            <Row>
-              <Container id='mobileBioCont'>
-                <p className='mobileBio bioSummary'>
-                  Hello, my name is Corbin. From an early age, creating has
-                  always been a passion and outlet. Whether it was creating clay
-                  replicas of video game characters, painting and building props
-                  as promotional material at my local movie theater, or
-                  sketching a passing thought, creativity has always helped
-                  bring out the best in me.
-                </p>
-                <p className='mobileBio bioSummary'>
-                  I obtained an Associates in Simulation and Game Design that
-                  inspired interest in a new kind of medium, programming and
-                  software development. I decied to pursue my curiousity further
-                  and found a program at a local university focusing on full
-                  stack development that showed me a new way to be creative. A
-                  creative outlet that can be practical and impactful.
-                </p>
-              </Container>
-            </Row>
-            <Row className='bioR'>
-              <Container className='contactCont' id='mobileContactArea'>
-                <Contact />
-              </Container>
-            </Row>
-          </Container>
+          <MobileController />
         )}
       </div>
     );
