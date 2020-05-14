@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "npm run start:prod",
+    "start": "node server.js",
     "start:prod": "cross-env NODE_ENV=production node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd portfolio && npm run start",
