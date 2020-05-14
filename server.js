@@ -35,7 +35,7 @@ app.post('/contact/email', async (req, res) => {
   }
 });
 
-app.use(express.static(path.join(__dirname, 'portfolio/build')));
+// app.use(express.static(path.join(__dirname, 'portfolio/build')));
 // app.get('*', (request, response) => {
 //   response.sendFile(
 //     path.resolve(__dirname, 'portfolio', 'build', 'index.html')
